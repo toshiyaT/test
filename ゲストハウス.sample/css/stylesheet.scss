@@ -1,0 +1,566 @@
+$silver: #9D9D9D;
+$black: #3E3E3E;
+$white: #FFF;
+$yellow: #FFAA3B;
+$blue: #4973FF;
+$red: #FF4646;
+
+body {
+font-family: 'Noto Serif JP', serif;
+color: $black;
+}
+.home{
+}
+.header-container{
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.header-left{
+  display: flex;
+  align-items: center;
+}
+.header-logo{
+  margin-left: 2rem;
+  height: 6rem;
+}
+.header-logo-text{
+  height: 2.7rem;
+  margin-left: 2rem;
+}
+.header-right{
+  margin-left: auto;
+    z-index: 1001;
+}
+.header-nav{
+  padding: 10px 70px;
+  border-bottom: solid 1px white;
+}
+
+.header-list{
+  padding-left: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  li{
+    margin-right: 40px;
+  }
+  li:last-child{
+    margin-right: 0px;
+  }
+  a{
+    color: white;
+    font-size: 1rem;
+  }
+  a:hover{
+    opacity: 1;
+    color:#93D6FF;
+  }
+}
+
+.header-under-line{
+  margin-top: .5rem;
+  height: 1px;
+  width: 600px;
+  background-color: white;
+}
+.home{
+  position: relative;
+  height: 100vh;
+  background-image: url(../images/top.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.home-inner-original{
+  background-color:rgba(0, 0, 0, 0.35);
+  height: 100vh;
+}
+.top-texts{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-65%) translateX(-62.5%);
+  -webkit-transform: translateY(-65%) translateX(-62.5%);
+  img{
+    width: 700px;
+  }
+}
+.side-button-inner{
+  position: fixed;
+  right: 0px;
+  top: 30%;
+  z-index: 100;
+}
+.top-buttons{
+  display: flex;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateY(-30%) translateX(-50%);
+  -webkit-transform: translateY(-30%) translateX(-50%);
+}
+.top-button{
+  color: white;
+  padding: .3rem .9rem;
+  border: 1px solid white;
+  margin-right: 4rem;
+  font-size: 1.4rem;
+}
+.top-button-last{
+  margin-right: 0px;
+}
+.top-button:hover{
+  color: $black;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.scroll {
+  position: absolute;
+  bottom: 0px;
+  right: 10%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-decoration: none;
+  color: white;
+  padding-top: 80px;
+  margin-bottom: 0px;
+}
+.scroll span {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  width: 36px;
+  height: 36px;
+  margin-right: 2px;
+  border-left: 1px solid white;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 2s infinite;
+  animation: sdb 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-13px, 13px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+@keyframes sdb {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-13px, 13px);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
+.side-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+.side-button a{
+  text-align: center;
+  display: block;
+  background-color: #E5F0FC;
+  color: $black;
+  width:40px;
+  border: solid 1px $black;
+}
+.side-active{
+  a{
+    width: 55px;
+    background-color: #7FC0F1;
+  }
+}
+.side-reserve{
+  position: relative;
+  a{width: 80px}
+}
+.side-button a:hover{
+  width: 55px;
+  opacity: 1;
+  background-color: #7FC0F1;
+}
+.side-reserve a:hover{
+  width: 80px
+}
+.reserve-img{
+  position: absolute;
+  width: 18px;
+  top: -30px;
+  right:73px;
+}
+
+/*+++ drawer CSS +++*/
+.zdo_drawer_menu{
+ display: none;
+}
+.zdo_drawer_button {
+  display: block;
+  padding: 0;
+  width: 32px;
+  height: 20px;
+  position: relative;
+  background: none;
+  border: none;
+  text-align: center;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  outline: none;
+}
+
+.zdo_drawer_button .zdo_drawer_bar {
+  display: block;
+  width: 32px;
+  height: 2px;
+  transition: all 0.5s;
+  transform-origin: 0% 0%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 0;
+}
+
+.zdo_drawer_button .zdo_drawer_bar1 {
+  top: 0;
+}
+
+.zdo_drawer_button .zdo_drawer_bar2 {
+  top: 50%;
+}
+
+.zdo_drawer_button .zdo_drawer_bar3 {
+  top: 100%;
+}
+
+.zdo_drawer_button.active .zdo_drawer_bar {
+  width: 28.77px;
+  left: 8px;
+  background-color: white;
+}
+
+.zdo_drawer_button.active .zdo_drawer_bar1 {
+  transform: rotate(0.7853981634rad) translateY(-50%);
+  top: 0px;
+}
+
+.zdo_drawer_button.active .zdo_drawer_bar2 {
+  opacity: 0;
+}
+
+.zdo_drawer_button.active .zdo_drawer_bar3 {
+  transform: rotate(-0.7853981634rad) translateY(-50%);
+  top: calc(100% - 0px);
+}
+
+.zdo_drawer_close {
+  letter-spacing: 0.08em;
+  display: none;
+}
+
+/*+++ Default Button Color +++*/
+.zdo_drawer_button {
+}
+
+.zdo_drawer_button .zdo_drawer_bar {
+  background-color: white;
+}
+
+/* === Hambuerger Button's Style End === */
+.zdo_drawer_menu .zdo_drawer_button {
+  /*+++ Hamburger Button Position +++*/
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  z-index: 1001;
+}
+.zdo_drawer_menu a {
+  color: inherit;
+}
+.zdo_drawer_menu a:visited {
+  color: inherit;
+}
+.zdo_drawer_menu .zdo_drawer_bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(51, 51, 51, 0.5);// ドロワーを開いた時の背景の色
+  display: none;
+  top: 0;
+  left: 0;
+}
+.zdo_drawer_menu .zdo_drawer_nav_wrapper {
+  width: 16rem;
+  transition: all 0.5s;
+  transform: translate(16rem);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
+.zdo_drawer_menu .zdo_drawer_nav_wrapper.open {
+  transform: translate(0);
+  width: 100%;// ドロワーを開いた時の横幅
+
+  background-color: rgba(0, 0, 0, 0.7);// ドロワーの背景色
+}
+.zdo_drawer_menu.left .zdo_drawer_button {
+  right: auto;
+  left: 32px;
+}
+.zdo_drawer_menu.left .zdo_drawer_nav_wrapper {
+  transform: translate(-312px);
+  right: auto;
+  left: 0;
+}
+.zdo_drawer_menu.left .zdo_drawer_nav_wrapper.open {
+  transform: translate(0);
+}
+
+/*+++ Default Navigation CSS +++*/
+.zdo_drawer_menu .zdo_drawer_nav {
+  padding: 70px 0px;// ドロワーメニューのpadding
+}
+.zdo_drawer_menu .zdo_drawer_nav li {
+  font-size: .9rem;// ドロワーメニューの文字サイズ
+  letter-spacing: .1em;// ドロワーメニューの文字間
+  margin-bottom: 35px;// ドロワーメニューの下マージン
+  color: white;
+  text-align: center;
+}
+.zdo_drawer_menu .zdo_drawer_nav li:last-child{
+  margin-bottom: 0px;
+}
+
+.zdo_drawer_nav a,
+.header-menu-container a{
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+}
+.zdo_drawer_nav a:hover{
+text-decoration: none;
+}
+
+.container-origin{
+  margin-bottom: 150px;
+}
+.intro-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+/*+++ intro-section CSS +++*/
+.intro-left{
+  width: 50%;
+  img{width:100%;}
+}
+
+.intro-right{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro-text{
+  width: 85%;
+}
+.intro-heading{
+  font-size: 1.7rem;
+  margin-bottom: 1.7rem;
+  line-height: 3rem;
+}
+
+.section-title{
+  text-align: center;
+  margin-bottom: 100px;
+}
+.section-rub{
+  color: $silver;
+}
+
+.rec-items{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+.rec-item{
+  margin: 0 35px 30px 0;
+  width: calc(14.285714% - 210px / 7);
+}
+.rec-item:nth-child(7n){
+  margin-right: 0px;
+}
+.rec-icon{
+  position: relative;
+  border: 1px solid $black;
+  border-radius: 20%;
+  margin-bottom: 10px;
+  img{
+    padding: 15%;
+    width: 100%;
+  }
+}
+.rec-circle{
+  position: absolute;
+  top:-12.5px;
+  left: 0px;
+  right: 0px;
+  margin:  auto;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: solid 1px $black;
+  background-color: $white;
+  text-align:center;
+  line-height: 22px;
+  font-size: .7rem
+}
+.rec-text{
+  text-align: center;
+}
+
+/*+++ room-section CSS +++*/
+.room-section{
+  margin-bottom: 250px
+}
+.box-wrapper{
+  position: relative;
+  overflow: inherit;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 370px;
+  background: linear-gradient(-135deg, #E5F0FC, $white);
+}
+.box-head{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1.7rem;
+  p{
+    margin-bottom: 0;
+    margin-left: 2.8rem;
+  }
+}
+.box-title{
+  padding-left: 3rem;
+  line-height: 1.4rem;
+  text-align: center;
+  margin-bottom: 0px;
+}
+.box-rub{
+  color: $silver;
+}
+
+.box-text{
+  width: 100%;
+  text-align: center;
+  p{margin-bottom: 2.5rem;}
+}
+.button-standard{
+  color: $black;
+  border: solid 1px $black;
+  padding: .5rem 5.7rem;
+}
+.button-standard:hover{
+  color: $white;
+  background-color: $black;
+}
+.room-img{
+  position: absolute;
+  bottom: -40%;
+  right: -37%;
+  width: 55%;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+  img{width: 100%}
+}
+
+.facility-container{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.facility-img{
+  position: absolute;
+  bottom: -40%;
+  left: -37%;
+  width: 55%;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+  img{width: 100%}
+}
+
+//Access start =============================================
+.access-mobile{
+  display: none;
+}
+.access-section{
+  display: flex;
+  margin-top: 300px;
+}
+.access-box-wrapper{
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px $black;
+}
+.access-box-head{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom:8%;
+  p{
+    margin-bottom: 0;
+    margin-left: 2.3rem;
+  }
+}
+.access-table {
+  margin: 0 auto;
+  margin-bottom: 8%;
+  table-layout: fixed;
+  text-align: left;
+  th:first-child {
+  width: 80px;
+  }
+}
+.access-box-text{
+  width: 100%;
+  text-align: center;
+}
+.access-map{
+  width: 50%;
+  display: box;
+  border: 1px solid $black;
+  border-left: none;
+}
+
+.iframe-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 71.5%; /* = height ÷ width × 100 */
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+}
+.iframe-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+//Access start =============================================
